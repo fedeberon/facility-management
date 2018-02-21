@@ -60,9 +60,9 @@
         <li><a href="index.html"><i class="icon icon-home"></i> <span>Informes Generales</span></a> </li>
         <li class="active"> <a href="charts.html"><i class="icon icon-signal"></i> <span>Graficos</span></a> </li>
         <!--<li> <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Widgetss</span></a> </li>-->
-        <li><a href="tables.html"><i class="icon icon-th"></i> <span>Procesos</span></a></li>
+        <li><a href="eeppFijos.html"><i class="icon icon-th"></i> <span>Estados de Pago</span></a></li>
         <!--<li><a href="grid.html"><i class="icon icon-fullscreen"></i> <span>Full width</span></a></li>-->
-        <li><a href="invoice.html"><i class="icon icon-fullscreen"></i> <span>Facturas</span></a></li>
+        <li><a href="tables.html"><i class="icon icon-fullscreen"></i> <span>Pedidos</span></a></li>
         <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Procesos</span> <span class="label label-important">3</span></a>
             <ul>
                 <li><a href="form-common.html">Solicitudes</a></li>
@@ -117,17 +117,14 @@
     <hr>
     <div class="row-fluid">
       <div class="span12">
-        <div class="widget-box">
-          <div class="widget-title"> <span class="icon"> <i class="icon-signal"></i> </span>
-            <h5>Medicion en tiempo real</h5>
+          <div class="widget-box">
+              <div class="widget-title"> <span class="icon"> <i class="icon-signal"></i> </span>
+                  <h5>Comparativa de importes entre Mano de Obra y Materiales de Servicio</h5>
+              </div>
+              <div class="widget-content">
+                  <div class="chart"></div>
+              </div>
           </div>
-          <div class="widget-content">
-            <div id="placeholder2"></div>
-            <p>Tiempo de actualizaci&oacute;n:
-              <input id="updateInterval" type="text" value="" style="text-align: right; width:5em">
-              millisegundos</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -181,14 +178,19 @@
     </div>
     <div class="row-fluid">
       <div class="span12">
-        <div class="widget-box">
-          <div class="widget-title"> <span class="icon"> <i class="icon-signal"></i> </span>
-            <h5>Bar chart</h5>
+
+          <div class="widget-box">
+              <div class="widget-title"> <span class="icon"> <i class="icon-signal"></i> </span>
+                  <h5>Medicion en tiempo real</h5>
+              </div>
+              <div class="widget-content">
+                  <div id="placeholder2"></div>
+                  <p>Tiempo de actualizaci&oacute;n:
+                      <input id="updateInterval" type="text" value="" style="text-align: right; width:5em">
+                      millisegundos</p>
+              </div>
           </div>
-          <div class="widget-content">
-            <div class="chart"></div>
-          </div>
-        </div>
+
       </div>
     </div>
     <div class="row-fluid">
@@ -295,7 +297,7 @@ $(function () {
 $(function () {
     var datasets = {
         "Global H.": {
-            label: "Chilein",
+            label: "Global H.",
             data: [[1988, 483994], [1989, 479060], [1990, 457648], [1991, 401949], [1992, 424705], [1993, 402375], [1994, 377867], [1995, 357382], [1996, 337946], [1997, 336185], [1998, 328611], [1999, 329421], [2000, 342172], [2001, 344932], [2002, 387303], [2003, 440813], [2004, 480451], [2005, 504638], [2006, 528692]]
         },
         "The Coffe House": {

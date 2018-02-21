@@ -1,39 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Matrix Admin</title>
+    <title>facility management</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
-    <link rel="stylesheet" href="css/colorpicker.css" />
-    <link rel="stylesheet" href="css/datepicker.css" />
     <link rel="stylesheet" href="css/uniform.css" />
     <link rel="stylesheet" href="css/select2.css" />
     <link rel="stylesheet" href="css/matrix-style.css" />
     <link rel="stylesheet" href="css/matrix-media.css" />
-    <link rel="stylesheet" href="css/bootstrap-wysihtml5.css" />
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
-
-    <style>
-
-        .left{
-            float:left;
-            margin-left: 5%;
-        }
-
-        .center{
-            float:left;
-            margin-left: 5%
-        }
-
-        .right{
-            float:left;
-            margin-left: 5%
-        }
-
-    </style>
 </head>
 <body>
 
@@ -75,11 +53,10 @@
 <div id="search">
     <input type="text" placeholder="Search here..."/>
     <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
-</div>
+|</div>
 <!--close-top-serch-->
 
 <!--sidebar-menu-->
-
 <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
     <ul>
         <li><a href="index.html"><i class="icon icon-home"></i> <span>Informes Generales</span></a> </li>
@@ -134,115 +111,202 @@
         </li>
     </ul>
 </div>
-
-<!--close-left-menu-stats-sidebar-->
+<!--sidebar-menu-->
 
 <div id="content">
     <div id="content-header">
-        <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="tip-bottom">Pedidos</a> <a href="#" class="current">Cotizaci&oacute;n</a> </div>
-        <h1>Pedido 123 - ETAPA: CARGA DE ORDEN DE COMPRA POR GLOBAL HIGIENE</h1>
+        <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">Ordenes de Compra</a> </div>
+        <h1>Ordenes de Compra</h1>
     </div>
     <div class="container-fluid">
         <hr>
         <div class="row-fluid">
             <div class="span12">
                 <div class="widget-box">
-                    <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
-                        <h5>Informacion del Pedido</h5>
+                    <div class="widget-title"> <span class="icon">
+                     <input type="checkbox" id="title-checkbox" name="title-checkbox" />
+                    </span>
+                        <h5>Consumo de Ordenes de Compra</h5>
                     </div>
                     <div class="widget-content nopadding">
-                        <table class="table">
+                        <table class="table table-bordered table-striped with-check data-table">
+                            <thead>
+                            <tr>
+                                <th><i class="icon-resize-vertical"></i></th>
+                                <th>Tipo</th>
+                                <th>-</th>
+                                <th>N&uacute;mero de OC</th>
+                                <th>Descripci&oacute;n</th>
+                                <th>-</th>
+                                <th>TTL Aprobado Factura Anual por O.C.</th>
+                                <th>Monto Maximo</th>
+                                <th>Saldo</th>
+                                <th></th>
+                            </tr>
+                            </thead>
                             <tbody>
+
                             <tr>
-                                <th>N&uacute;mero </th><td>123</td>
-                            </tr>
-                            <tr>
-                                <th>Pedido</th><td>CEP - Mant. Cañerias Sanit. oct16-sep17</td>
-                            </tr>
-                            <tr>
-                                <th>Fecha</th><td>25/01/2018</td>
-                            </tr>
-                            <tr>
-                                <th>Adjuntos</th><td><a href="#">Descargar</a></td>
-                            </tr>
-                            <tr>
-                                <th>Descripcion</th><td>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí"</td>
-                            </tr>
-                            <tr>
-                                <th>Tags</th><td>Mantenimiento - Limpieza/td>
+                                <td><input type="checkbox" /></td>
+                                <td>Fijos UF</td>
+                                <td>10</td>
+                                <td>4500453435</td>
+                                <td>OM008C - CEP- Mant. Elec. + Dat. + Clima</td>
+                                <td>Servicio Global Higiene</td>
+                                <td> Adm Espec</td>
+                                <td>  UF1.120,68</td>
+                                <td>  -</td>
+                                <td><a href="#myModal" data-toggle="modal" class="btn btn-info">Detalle</a></td>
                             </tr>
 
                             <tr>
-                                <th>Estado</th><td>CARGA DE ORDEN DE COMPRA</td>
+                                <td><input type="checkbox" /></td>
+                                <td>Fijos UF</td>
+                                <td>20</td>
+                                <td>4500453435</td>
+                                <td>OM008C - CEP- Mant. Elec. + Dat. + Clima</td>
+                                <td>Mtto Preventivo</td>
+                                <td> Elec.+Dat- + Clima</td>
+                                <td>   UF907,20</td>
+                                <td>  -</td>
+                                <td><a href="#myModal" data-toggle="modal" class="btn btn-info">Detalle</a></td>
                             </tr>
 
                             <tr>
-                                <th>Empresa Ganadora</th><td>EMPRESA X S.A.</td>
-                            </tr>
-
-                            <tr>
-                                <th>O.C. Siemens</th>
-                                <td>
-                                    <div class="container">
-                                        <div class="control-group left">
-                                            <div class="controls">
-                                                <a href="#">Orden de Compra Siemens.pdf</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="control-group left">
-                                            <div class="controls">
-                                                <label>123123123</label>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </td>
+                                <td><input type="checkbox" /></td>
+                                <td>Fijos $$</td>
+                                <td>10</td>
+                                <td>4500453670</td>
+                                <td>OM018C - CEP: Desinfección de aire</td>
+                                <td>Servicio Global Higiene</td>
+                                <td>Insumos</td>
+                                <td> $1.010.880</td>
+                                <td> $909.792</td>
+                                <td><a href="#myModal" data-toggle="modal" class="btn btn-info">Detalle</a></td>
                             </tr>
 
 
                             <tr>
-                                <th>O. C. Global Higiene</th>
-                                <td>
-                                    <div class="container">
-                                        <div class="control-group left">
-                                            <div class="controls">
-                                                <input type="text" placeholder="Numero de Orden de Compra"/>
-                                            </div>
-                                        </div>
-
-                                        <div class="controls right">
-                                            <div class="controls">
-                                                <input type="file" />
-                                            </div>
-                                        </div>
-
-                                </td>
+                                <td><input type="checkbox" /></td>
+                                <td>Variables $$</td>
+                                <td></td>
+                                <td></td>
+                                <td>CEP - Coffees a pedido</td>
+                                <td>Servicios Varios</td>
+                                <td>Consumibles</td>
+                                <td>  $67.725.000</td>
+                                <td>  $53.033.002</td>
+                                <td><a href="#myModal" data-toggle="modal" class="btn btn-info">Detalle</a></td>
                             </tr>
 
+
+
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>Variables $$</td>
+                                <td></td>
+                                <td>4500456807</td>
+                                <td>BM005C - CEP - Elec.+Dat- + Clima Correctivo</td>
+                                <td>Mtto Correctivo</td>
+                                <td>Elec.+Dat- + Clima</td>
+                                <td>  $9.489.600</td>
+                                <td>  $7.052.785</td>
+                                <td><a href="#myModal" data-toggle="modal" class="btn btn-info">Detalle</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>Fijos $$</td>
+                                <td>10</td>
+                                <td>4500453670</td>
+                                <td>OM018C - CEP: Desinfección de aire</td>
+                                <td>Servicio Global Higiene</td>
+                                <td>Insumos</td>
+                                <td> $1.010.880</td>
+                                <td> $909.792</td>
+                                <td><a href="#myModal" data-toggle="modal" class="btn btn-info">Detalle</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>Eventuales $$</td>
+                                <td>10</td>
+                                <td>4500453730</td>
+                                <td>BM012C - CEP - Extintores</td>
+                                <td>Mtto Preventivo</td>
+                                <td>Varios</td>
+                                <td>  $350.000</td>
+                                <td>  $350.000</td>
+                                <td><a href="#myModal" data-toggle="modal" class="btn btn-info">Detalle</a></td>
+                            </tr>
                             </tbody>
-                    </table>
+                        </table>
+                    </div>
                 </div>
+
+               <hr>
+
             </div>
         </div>
+    </div>
+</div>
 
-            <div class="span12">
 
-                <div class="btn-group dropup">
-                    <button class="btn btn-large btn-success">Guardar</button>
-                    <button data-toggle="dropdown" class="btn btn-large btn-success dropdown-toggle"><span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Generar Archivo TOCO</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Solo Guardar</a></li>
-                    </ul>
-                </div>
+<div class="widget-content">
+    <a href="#myAlert" data-toggle="modal" class="btn btn-warning">Track</a>
 
-            </div>
+    <div id="myModal" class="modal hide">
+        <div class="modal-header">
+            <button data-dismiss="modal" class="close" type="button">×</button>
+            <h3>Gastos por de la O.C.</h3>
+        </div>
+        <div class="modal-body">
+
+
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>H.E.S.</th>
+                    <th>Monto</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>01-01-2017</td>
+                    <td>123456</td>
+                    <td>$1.123.456</td>
+                </tr>
+                <tr>
+                    <td>01-02-2017</td>
+                    <td>123456</td>
+                    <td>$1.123.456</td>
+                </tr>
+                <tr>
+                    <td>01-03-2017</td>
+                    <td>123456</td>
+                    <td>$1.123.456</td>
+                </tr>
+
+                <tr>
+                    <td>01-04-2017</td>
+                    <td>123456</td>
+                    <td>$1.123.456</td>
+                </tr>
+
+                <tr>
+                    <td>01-05-2017</td>
+                    <td>123456</td>
+                    <td>$1.123.456</td>
+                </tr>
+
+                </tbody>
+            </table>
 
         </div>
     </div>
 </div>
+
 <!--Footer-part-->
 <div class="row-fluid">
     <div id="footer" class="span12"> 2018 &copy; facility management <a href="http://www.bolivarsoftware.com.ar">Bolivar Software</a> </div>
@@ -251,19 +315,10 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.ui.custom.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-colorpicker.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="js/jquery.toggle.buttons.js"></script>
-<script src="js/masked.js"></script>
 <script src="js/jquery.uniform.js"></script>
 <script src="js/select2.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
 <script src="js/matrix.js"></script>
-<script src="js/matrix.form_common.js"></script>
-<script src="js/wysihtml5-0.3.0.js"></script>
-<script src="js/jquery.peity.min.js"></script>
-<script src="js/bootstrap-wysihtml5.js"></script>
-<script>
-    $('.textarea_editor').wysihtml5();
-</script>
+<script src="js/matrix.tables.js"></script>
 </body>
 </html>
